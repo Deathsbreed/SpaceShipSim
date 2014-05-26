@@ -1,2 +1,5 @@
 # Ignore binary files
 bin/*
+
+# Ignore this very file
+.gitignore
