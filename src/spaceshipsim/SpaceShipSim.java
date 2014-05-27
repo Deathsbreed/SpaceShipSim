@@ -17,21 +17,29 @@ import spaceshipsim.entities.*;
  * 
  */
 public class SpaceShipSim extends JFrame implements Runnable, KeyListener {
-	private final String version = "v0.1";
+	private final String version = "v0.2";
 
+	// Menu items
+	JMenuBar menuBar;
+	JMenu simulationMenu;
+	JMenuItem exitMenuItem;
+
+	// Graphics/Framework items
 	private Thread gameloop;
 	private BufferedImage backbuffer;
 	private Graphics2D g2d;
 	private AffineTransform identity = new AffineTransform();
 
+	// The Ship
 	private Ship ship;
 
 	// Constructor:
 	public SpaceShipSim() {
 		super("Space Ship Simulator");
-		setSize(800, 600);
-		setVisible(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setSize(800, 600);
+		menuSetup();
+		setVisible(true);
 
 		backbuffer = new BufferedImage(800, 600, BufferedImage.TYPE_INT_RGB);
 		g2d = backbuffer.createGraphics();
@@ -40,6 +48,22 @@ public class SpaceShipSim extends JFrame implements Runnable, KeyListener {
 		addKeyListener(this);
 
 		start();
+	}
+
+	public void menuSetup() {
+		menuBar = new JMenuBar();
+		simulationMenu = new JMenu("Simulation");
+		exitMenuItem = new JMenuItem("Exit");
+
+		exitMenuItem.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent ae) {
+				stop();
+				System.exit(0);
+			}
+		});
+		menuBar.add(simulationMenu);
+		this.setJMenuBar(menuBar);
 	}
 
 	public void start() {
@@ -95,7 +119,6 @@ public class SpaceShipSim extends JFrame implements Runnable, KeyListener {
 	}
 
 	public void keyPressed(KeyEvent ke) {
-		//keys[ke.getKeyCode()] = true;
 		int keyCode = ke.getKeyCode();
 
 		if(keyCode == KeyEvent.VK_UP) { ship.setAccelerate(true); }

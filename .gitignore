@@ -1,2 +1,5 @@
 # Ignore binary files
 bin/*
+
+# Just in case some .class files escape:
+*.class
