@@ -50,6 +50,7 @@ public class SpaceShipSim extends JFrame implements Runnable, KeyListener {
 		start();
 	}
 
+	// FIXME: There are no errors in compilation or while running, but the menu bar does not appear
 	public void menuSetup() {
 		menuBar = new JMenuBar();
 		simulationMenu = new JMenu("Simulation");
@@ -65,6 +66,7 @@ public class SpaceShipSim extends JFrame implements Runnable, KeyListener {
 		menuBar.add(simulationMenu);
 		this.setJMenuBar(menuBar);
 	}
+	// !!!FIXME-END!!!
 
 	public void start() {
 		gameloop = new Thread(this);
