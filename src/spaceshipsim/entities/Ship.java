@@ -27,6 +27,7 @@ public class Ship extends BaseVectorShape {
 	public Ship(double nx, double ny) {
 		setX(nx);
 		setY(ny);
+		setVelY(-0.5);
 		setShape(new Polygon(shipx, shipy, shipx.length));
 		setAlive(true);
 	}
