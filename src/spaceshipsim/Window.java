@@ -1,7 +1,6 @@
 package spaceshipsim;
 
 import javax.swing.*;
-import java.awt.*;
 
 /**
  * @author Nicolás A. Ortega
@@ -11,5 +10,7 @@ import java.awt.*;
  * 
  */
 public class Window {
-	// Stuff here.
+	public Window(String title, String infoMessage) {
+		JOptionPane.showMessageDialog(null, infoMessage, title, JOptionPane.INFORMATION_MESSAGE);
+	}
 }

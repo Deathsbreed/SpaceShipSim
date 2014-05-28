@@ -62,21 +62,41 @@ public class SpaceShipSim {
 		instructionsItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				// Stuff happens.
+				new Window("Instructions", "Accelerate: Up Arrow\n" +
+					"Turn left: Left Arrow\n" +
+					"Turn right: Right Arrow\n\n");
 			}
 		});
 		licenseItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				// Stuff happens.
+				new Window("License Information",
+					"SpaceShipSim v0.2, a simulation of a spaceship in a frictionless environment\n" +
+					"Copyright (C) 2014 Nicolás A. Ortega\n\n" +
+					"This program is free software: you can redistribute it and/or modify\n" +
+					"it under the terms of the GNU General Public License as published by\n" +
+					"the Free Software Foundation, either version 3 of the License, or\n" +
+					"(at your option) any later version.\n\n" +
+					"This program is distributed in the hope that it will be useful,\n" +
+					"but WITHOUT ANY WARRANTY; without even the implied warranty of\n" +
+					"MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n" +
+					"GNU General Public License for more details.\n\n" +
+					"You should have received a copy of the GNU General Public License\n" +
+					"along with this program.  If not, see <http://www.gnu.org/licenses/>.\n\n");
 			}
 		});
 		aboutItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				// Stuff happens.
+				new Window("About", "SpaceShipSim v0.2\n" +
+					"Copyright (C) 2014 Nicolás A. Ortega\n" +
+					"Contact: nicolas.ortega.froysa@gmail.com\n" +
+					"Source-code: https://github.com/Deathsbreed/SpaceShipSim\n" +
+					"Developers: Nicolás Ortega\n\n");
 			}
 		});
+
+		exitItem.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, InputEvent.CTRL_MASK));
 
 
 		simulationMenu.add(resetItem);
