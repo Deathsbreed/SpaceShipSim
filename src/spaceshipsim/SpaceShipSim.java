@@ -16,8 +16,13 @@ public class SpaceShipSim {
 
 	// Menu items
 	JMenuBar menuBar;
+
 	JMenu simulationMenu;
-	JMenuItem exitMenuItem;
+	JMenuItem resetItem;
+	JMenuItem exitItem;
+
+	JMenu helpMenu;
+	JMenuItem aboutItem;
 
 	// Constructor:
 	public SpaceShipSim() {
@@ -30,24 +35,45 @@ public class SpaceShipSim {
 		frame.setVisible(true);
 	}
 
-	// FIXME: There are no errors in compilation or while running, but the menu bar does not appear
 	public void menuSetup() {
 		menuBar = new JMenuBar();
 		simulationMenu = new JMenu("Simulation");
-		exitMenuItem = new JMenuItem("Exit");
+		resetItem = new JMenuItem("Reset");
+		exitItem = new JMenuItem("Exit");
+		helpMenu = new JMenu("Help");
+		aboutItem = new JMenuItem("About");
 
-		exitMenuItem.addActionListener(new ActionListener() {
+		resetItem.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent ae) { panel.reset(); }
+		});
+		exitItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent ae) {
 				panel.stop();
 				System.exit(0);
 			}
 		});
-		simulationMenu.add(exitMenuItem);
+
+		aboutItem.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent ae) {
+				
+			}
+		});
+
+
+		simulationMenu.add(resetItem);
+		simulationMenu.addSeparator();
+		simulationMenu.add(exitItem);
+
+		helpMenu.add(aboutItem);
+
 		menuBar.add(simulationMenu);
+		menuBar.add(helpMenu);
+
 		frame.setJMenuBar(menuBar);
 	}
-	// !!!FIXME-END!!!
 
 	public static void main(String[] args) { new SpaceShipSim(); }
 }

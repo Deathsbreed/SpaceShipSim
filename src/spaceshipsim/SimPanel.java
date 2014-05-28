@@ -99,4 +99,8 @@ public class SimPanel extends JPanel implements Runnable, KeyListener {
 		if(keyCode == KeyEvent.VK_RIGHT) { ship.setTurnRight(false); }
 	}
 	public void keyTyped(KeyEvent ke) {}
+
+	public void reset() {
+		ship = new Ship(400, 300);
+	}
 }
