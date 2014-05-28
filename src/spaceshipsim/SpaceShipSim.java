@@ -58,7 +58,7 @@ public class SpaceShipSim {
 		aboutItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				
+				// Stuff happens.
 			}
 		});
 

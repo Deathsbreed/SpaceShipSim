@@ -11,5 +11,5 @@ import java.awt.*;
  * 
  */
 public class Window {
-	public 
+	// Stuff here.
 }
