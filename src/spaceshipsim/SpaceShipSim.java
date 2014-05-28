@@ -71,7 +71,7 @@ public class SpaceShipSim {
 			@Override
 			public void actionPerformed(ActionEvent ae) {
 				new Window("License Information",
-					"SpaceShipSim v0.2, a simulation of a spaceship in a frictionless environment\n" +
+					"SpaceShipSim " + panel.version + ", a simulation of a spaceship in a frictionless environment\n" +
 					"Copyright (C) 2014 Nicolás A. Ortega\n\n" +
 					"This program is free software: you can redistribute it and/or modify\n" +
 					"it under the terms of the GNU General Public License as published by\n" +
@@ -88,7 +88,7 @@ public class SpaceShipSim {
 		aboutItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				new Window("About", "SpaceShipSim v0.2\n" +
+				new Window("About", "SpaceShipSim +" + panel.version + "\n" +
 					"Copyright (C) 2014 Nicolás A. Ortega\n" +
 					"Contact: nicolas.ortega.froysa@gmail.com\n" +
 					"Source-code: https://github.com/Deathsbreed/SpaceShipSim\n" +

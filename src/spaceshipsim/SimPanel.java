@@ -16,6 +16,8 @@ import spaceshipsim.entities.*;
  * 
  */
 public class SimPanel extends JPanel implements Runnable, KeyListener {
+	public final static String version = "v0.3";
+
 	// Graphics/Framework items
 	private Thread gameloop;
 	//private BufferedImage backbuffer;
@@ -53,7 +55,7 @@ public class SimPanel extends JPanel implements Runnable, KeyListener {
 	private void drawInfo() {
 		g2d.translate(0, 10);
 		g2d.setColor(Color.WHITE);
-		g2d.drawString("Welcome to SpaceShipSim v0.2", 10, 10);
+		g2d.drawString("Welcome to SpaceShipSim " + version, 10, 10);
 		g2d.drawString("Position: " + (int)ship.getX() + ", " + (int)ship.getY(), 10, 25);
 		g2d.drawString("Velocity (px/s): " + (int)(ship.getVelX() * 50) + ", " + (int)(ship.getVelY() * 50), 10, 40);
 		g2d.drawString("Acceleration (px/s/s): " + (int)(ship.getAccelX() * Math.pow(50, 2)) + ", " + (int)(ship.getAccelY() * Math.pow(50, 2)), 10, 55);
