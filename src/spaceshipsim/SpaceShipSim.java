@@ -22,6 +22,8 @@ public class SpaceShipSim {
 	JMenuItem exitItem;
 
 	JMenu helpMenu;
+	JMenuItem instructionsItem;
+	JMenuItem licenseItem;
 	JMenuItem aboutItem;
 
 	// Constructor:
@@ -41,6 +43,8 @@ public class SpaceShipSim {
 		resetItem = new JMenuItem("Reset");
 		exitItem = new JMenuItem("Exit");
 		helpMenu = new JMenu("Help");
+		instructionsItem = new JMenuItem("Instructions");
+		licenseItem = new JMenuItem("License");
 		aboutItem = new JMenuItem("About");
 
 		resetItem.addActionListener(new ActionListener() {
@@ -55,6 +59,18 @@ public class SpaceShipSim {
 			}
 		});
 
+		instructionsItem.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent ae) {
+				// Stuff happens.
+			}
+		});
+		licenseItem.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent ae) {
+				// Stuff happens.
+			}
+		});
 		aboutItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent ae) {
@@ -67,6 +83,9 @@ public class SpaceShipSim {
 		simulationMenu.addSeparator();
 		simulationMenu.add(exitItem);
 
+		helpMenu.add(instructionsItem);
+		helpMenu.add(licenseItem);
+		helpMenu.addSeparator();
 		helpMenu.add(aboutItem);
 
 		menuBar.add(simulationMenu);
