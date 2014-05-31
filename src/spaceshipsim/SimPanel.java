@@ -20,9 +20,7 @@ public class SimPanel extends JPanel implements Runnable, KeyListener {
 
 	// Graphics/Framework items
 	private Thread gameloop;
-	//private BufferedImage backbuffer;
 	private Graphics2D g2d;
-	//private AffineTransform identity = new AffineTransform();
 
 	// The Ship
 	private Ship ship;
