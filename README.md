@@ -5,7 +5,7 @@ Space Ship Simulator is a basic 2D simulator of a spaceship in a frictionless en
 
 To compile the source-code, go into the project src/ folder and run the following command:
 ```
-$ javac spaceshipsim/SpaceShipSim.java
+$ ant jar
 ```
 
 ###Contributing
