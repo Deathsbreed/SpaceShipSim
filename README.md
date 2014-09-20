@@ -3,7 +3,8 @@ SpaceShipSim
 
 Space Ship Simulator is a basic 2D simulator of a spaceship in a frictionless environment. This program was made for educational purposes, and is meant to be quite simple.
 
-To compile the source-code, go into the project src/ folder and run the following command:
+###Compiling
+To compile make sure you have JDK and Apache Ant installed. Then run this in the root directory of the project:
 ```
 $ ant jar
 ```
