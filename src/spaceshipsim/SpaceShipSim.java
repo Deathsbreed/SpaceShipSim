@@ -88,7 +88,7 @@ public class SpaceShipSim {
 		aboutItem.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent ae) {
-				new Window("About", "SpaceShipSim +" + panel.version + "\n" +
+				new Window("About", "SpaceShipSim " + panel.version + "\n" +
 					"Copyright (C) 2014 Nicolás A. Ortega\n" +
 					"Contact: nicolas.ortega.froysa@gmail.com\n" +
 					"Source-code: https://github.com/Deathsbreed/SpaceShipSim\n" +
