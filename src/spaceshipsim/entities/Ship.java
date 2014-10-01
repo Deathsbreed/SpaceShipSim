@@ -62,11 +62,16 @@ public class Ship extends BaseVectorShape {
 		r = new Rectangle((int)getX() - 6, (int)getY() - 6, 12, 12);
 		return r;
 	}
+
 	public double getAccelX() { return accelerateX; }
 	public double getAccelY() { return accelerateY; }
 
 	// Setter methods:
 	public void setAccelerate(boolean accel) { this.accelerate = accel; }
+	public void setAccelX(double aX) { this.accelerateX = aX; }
+	public void setAccelY(double aY) { this.accelerateY = aY; }
+	public void incAccelX(double iaX) { this.accelerateX += iaX; }
+	public void incAccelY(double iaY) { this.accelerateY += iaY; }
 	public void setTurnLeft(boolean tL) { this.turnLeft = tL; }
 	public void setTurnRight(boolean tR) { this.turnRight = tR; }
 
