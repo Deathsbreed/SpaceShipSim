@@ -115,5 +115,11 @@ public class SpaceShipSim {
 		frame.setJMenuBar(menuBar);
 	}
 
+	public class Window {
+		public Window(String title, String msg) {
+			JOptionPane.showMessageDialog(null, msg, title, JOptionPane.INFORMATION_MESSAGE);
+		}
+	}
+
 	public static void main(String[] args) { new SpaceShipSim(); }
 }
