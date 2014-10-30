@@ -5,7 +5,7 @@ Space Ship Simulator is a basic 2D simulator of a spaceship in a frictionless en
 
 ###Compiling
 To compile make sure you have JDK and Apache Ant installed. Then run this in the root directory of the project:
-```
+```bash
 $ ant
 ```
 
