@@ -20,11 +20,11 @@ public class Ship extends BaseVectorShape {
 	private boolean turnRight = false;
 
 	// Acceleration variables
-	private double accelerateX;
-	private double accelerateY;
+	private float accelerateX;
+	private float accelerateY;
 
 	// Constructor:
-	public Ship(double nx, double ny) {
+	public Ship(float nx, float ny) {
 		setX(nx);
 		setY(ny);
 		setShape(new Polygon(shipx, shipy, shipx.length));
@@ -35,8 +35,8 @@ public class Ship extends BaseVectorShape {
 	public void update() {
 		if(accelerate) {
 			setMoveAngle(getFaceAngle() - 90);
-			accelerateX = calcAngleMoveX(getMoveAngle()) * 0.1;
-			accelerateY = calcAngleMoveY(getMoveAngle()) * 0.1;
+			accelerateX = calcAngleMoveX(getMoveAngle()) * 0.1f;
+			accelerateY = calcAngleMoveY(getMoveAngle()) * 0.1f;
 			incVelX(accelerateX);
 			incVelY(accelerateY);
 		} else {
@@ -63,19 +63,19 @@ public class Ship extends BaseVectorShape {
 		return r;
 	}
 
-	public double getAccelX() { return accelerateX; }
-	public double getAccelY() { return accelerateY; }
+	public float getAccelX() { return accelerateX; }
+	public float getAccelY() { return accelerateY; }
 
 	// Setter methods:
 	public void setAccelerate(boolean accel) { this.accelerate = accel; }
-	public void setAccelX(double aX) { this.accelerateX = aX; }
-	public void setAccelY(double aY) { this.accelerateY = aY; }
-	public void incAccelX(double iaX) { this.accelerateX += iaX; }
-	public void incAccelY(double iaY) { this.accelerateY += iaY; }
+	public void setAccelX(float aX) { this.accelerateX = aX; }
+	public void setAccelY(float aY) { this.accelerateY = aY; }
+	public void incAccelX(float iaX) { this.accelerateX += iaX; }
+	public void incAccelY(float iaY) { this.accelerateY += iaY; }
 	public void setTurnLeft(boolean tL) { this.turnLeft = tL; }
 	public void setTurnRight(boolean tR) { this.turnRight = tR; }
 
 	// Methods used for calculations:
-	public double calcAngleMoveX(double angle) { return (double) (Math.cos(angle * Math.PI / 180)); }
-	public double calcAngleMoveY(double angle) { return (double) (Math.sin(angle * Math.PI / 180)); }
+	public float calcAngleMoveX(float angle) { return (float)Math.cos(angle * Math.PI / 180); }
+	public float calcAngleMoveY(float angle) { return (float)Math.sin(angle * Math.PI / 180); }
 }

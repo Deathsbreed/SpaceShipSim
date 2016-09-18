@@ -12,45 +12,45 @@ import java.awt.Shape;
 public class BaseVectorShape {
 	private Shape shape;
 	private boolean alive;
-	private double x, y;
-	private double velX, velY;
-	private double moveAngle, faceAngle;
+	private float x, y;
+	private float velX, velY;
+	private float moveAngle, faceAngle;
 
 	// Constructor:
 	public BaseVectorShape() {
 		setShape(null);
 		setAlive(false);
-		setX(0.0);
-		setY(0.0);
-		setVelX(0.0);
-		setVelY(0.0);
-		setMoveAngle(0.0);
-		setFaceAngle(0.0);
+		setX(0.0f);
+		setY(0.0f);
+		setVelX(0.0f);
+		setVelY(0.0f);
+		setMoveAngle(0.0f);
+		setFaceAngle(0.0f);
 	}
 
 	// Accessor methods:
 	public Shape getShape() { return shape; }
 	public boolean isAlive() { return alive; }
-	public double getX() { return x; }
-	public double getY() { return y; }
-	public double getVelX() { return velX; }
-	public double getVelY() { return velY; }
-	public double getMoveAngle() { return moveAngle; }
-	public double getFaceAngle() { return faceAngle; }
+	public float getX() { return x; }
+	public float getY() { return y; }
+	public float getVelX() { return velX; }
+	public float getVelY() { return velY; }
+	public float getMoveAngle() { return moveAngle; }
+	public float getFaceAngle() { return faceAngle; }
 
 	// Setter methods:
 	public void setShape(Shape shape) { this.shape = shape; }
 	public void setAlive(boolean alive) { this.alive = alive; }
-	public void setX(double x) { this.x = x; }
-	public void incX(double iX) { this.x += iX; }
-	public void setY(double y) { this.y = y; }
-	public void incY(double iY) { this.y += iY; }
-	public void setVelX(double velX) { this.velX = velX; }
-	public void incVelX(double iVX) { this.velX += iVX; }
-	public void setVelY(double velY) { this.velY = velY; }
-	public void incVelY(double iVY) { this.velY += iVY; }
-	public void setMoveAngle(double nMA) { this.moveAngle = nMA; }
-	public void incMoveAngle(double iMA) { this.moveAngle += iMA; }
-	public void setFaceAngle(double nFA) { this.faceAngle = nFA; }
-	public void incFaceAngle(double iFA) { this.faceAngle += iFA; }
+	public void setX(float x) { this.x = x; }
+	public void incX(float iX) { this.x += iX; }
+	public void setY(float y) { this.y = y; }
+	public void incY(float iY) { this.y += iY; }
+	public void setVelX(float velX) { this.velX = velX; }
+	public void incVelX(float iVX) { this.velX += iVX; }
+	public void setVelY(float velY) { this.velY = velY; }
+	public void incVelY(float iVY) { this.velY += iVY; }
+	public void setMoveAngle(float nMA) { this.moveAngle = nMA; }
+	public void incMoveAngle(float iMA) { this.moveAngle += iMA; }
+	public void setFaceAngle(float nFA) { this.faceAngle = nFA; }
+	public void incFaceAngle(float iFA) { this.faceAngle += iFA; }
 }
